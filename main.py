@@ -13,7 +13,9 @@ thread = project.agents.threads.create()
 print(f"Created thread, ID: {thread.id}")
 
 message = project.agents.messages.create(
-    thread_id=thread.id, role="user", content="Dame un resumen de lo que tengo en el archivo subido"
+    thread_id=thread.id,
+    role="user",
+    content="What is PerksPlus Health and Wellness Reimbursement Program for Contoso Electronics Employees",
 )
 
 run = project.agents.runs.create_and_process(thread_id=thread.id, agent_id=agent.id)
